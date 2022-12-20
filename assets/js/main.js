@@ -19,7 +19,7 @@ const controller = new ScrollMagic.Controller();
 // const hideAlle1 = TweenMax.fromTo(boutme,personal, 0.01, {opacity:1},{opacity:0})
 // Scene
 let scene = new ScrollMagic.Scene({
-	duration: 7500,
+	duration: 4000,
 	triggerElement: main,
 	triggerHook: 0
 })
@@ -29,7 +29,7 @@ let scene = new ScrollMagic.Scene({
 
 const heroAnimation = TweenMax.fromTo(text, 0.1, { opacity:1}, {opacity:0});
 let scene2 = new ScrollMagic.Scene({
-	duration: 3500,
+	duration: 2000,
 	triggerElement: main,
 	triggerHook: 0
 })

@@ -26,6 +26,7 @@ body::-webkit-scrollbar {
 	width: 100%;
 	height: 50px;
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	z-index: 100;
 }
 .navbar a {
@@ -64,7 +65,9 @@ body::-webkit-scrollbar {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+	-webkit-object-fit: cover;
 	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
 }
 
 .main .hero {
@@ -110,7 +113,7 @@ body::-webkit-scrollbar {
 	font-size: 40px;
 	text-align: left;
 }
-.g-items {
+.g-items-vid {
 	position: relative;
 	padding: 0 20px;
 	overflow-x: scroll;
@@ -119,8 +122,24 @@ body::-webkit-scrollbar {
 	display: flex;
 	gap: 20px;
 	border-radius: 8px;
-	width: auto;
-	height: 500px;
+	height: 750px
+}
+.g-items-vid::-webkit-scrollbar {
+    display: none;
+}
+.g-items-pho {
+	position: relative;
+	padding: 0 20px;
+	overflow-x: scroll;
+  	overflow-y: hidden;
+  	white-space: nowrap;
+	display: flex;
+	gap: 20px;
+	border-radius: 8px;
+	height: 500px
+}
+.g-items-pho::-webkit-scrollbar {
+    display: none;
 }
 .g-items::-webkit-scrollbar {
     display: none;
@@ -171,7 +190,7 @@ body::-webkit-scrollbar {
 	margin-bottom: 50px;
 }
 .videos {
-	height: 50vh;
+	height: 75vh;
 }
 #photos {
 	margin: 0 0 50px 0;
@@ -259,4 +278,49 @@ textarea {
 }
 .bghover:hover {
 	background-color: darkcyan;
+}
+.mobileVid {
+	display: none;
+}
+@media screen and (max-width: 600px) {
+	.mobileVid {
+		display: block;
+		position: fixed;
+  		right: 0;
+  		bottom: 0;
+  		min-width: 100%; 
+  		min-height: 100%;
+	}
+	.links {
+		font-size: 14px;
+		gap: 14px
+	}
+	.videos {
+		height: 100vh;
+	}
+	.photos {
+		height: 100vh;
+	}
+	.contact {
+		height: 75vh;
+	}
+	.g-text {
+		opacity: 1;
+	}
+	.g-img {
+		width: 300px;
+		height: 300px;
+	}
+	input {
+		width: 300px;
+	}
+	textarea {
+		width: 300px;
+	}
+	.social {
+		margin-top: 40px;
+	}
+	.rasti {
+		display: none;
+	}
 }
